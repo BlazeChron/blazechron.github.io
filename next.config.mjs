@@ -7,6 +7,14 @@ const withMDX = createMDX({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '', 
+
+  images: {
+    unoptimized: true,
+  },
+
+  output: 'export', 
+
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
   // ... other config
 };
