@@ -1,0 +1,6 @@
+.mdxContent h1 {
+  color: red;
+  font-size: 90px;
+  border-bottom: 2px solid lightgray;
+  padding-bottom: 10px;
+}
