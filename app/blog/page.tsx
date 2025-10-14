@@ -21,7 +21,7 @@ console.log(allMdxFiles);
 
 const list = allMdxFiles.map((item, key) => {
   const Post = item.Component;
-return <div className={styles.mdxContent} style={{border: '1px solid black'}}>
+return <div key={key} className={styles.mdxContent} style={{border: '1px solid black'}}>
   <Post />
 </div>});
 
