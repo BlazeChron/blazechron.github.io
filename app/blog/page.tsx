@@ -5,7 +5,7 @@ import styles from './styles.module.css'
 
  
 export default function Page() {
-    const mdxContext = require.context('./blogs', true, /\.mdx$/)
+    const mdxContext = (require as any).context('./blogs', true, /\.mdx$/)
 const allMdxFiles = mdxContext.keys().map(filePath => {
   const content = mdxContext(filePath); // This executes the module/file
   const Component = content.default;
