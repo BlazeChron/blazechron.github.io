@@ -2,6 +2,7 @@ import Image from "next/image";
 import shimaenaga from "../assets/shimaenaga.png";
 import github from "../assets/github-mark.svg";
 import itch from "../assets/itchio-textless-black.svg";
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -19,11 +20,14 @@ export default function Home() {
               transform: 'rotate(0deg)'
             }}
           />
-        <ul className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
+        <ul className="list-inside list-decimal max-w-md mx-auto text-sm text-center font-[family-name:var(--font-geist-mono)]">
             BlazeChron&apos;s site WIP using next.js
         </ul>
-        <ul className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
+        <ul className="list-inside list-decimal max-w-md mx-auto text-sm text-center font-[family-name:var(--font-geist-mono)]">
             Creating a single player card game
+        </ul>
+        <ul className="list-inside list-decimal max-w-md mx-auto text-sm text-center font-[family-name:var(--font-geist-mono)]">
+          <Link href="/blog"><u>Blog</u></Link>
         </ul>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
