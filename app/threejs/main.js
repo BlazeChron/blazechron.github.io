@@ -44,7 +44,6 @@ export function initOpening() {
   
     let basePosition = new THREE.Vector3(-center.x + 10, size.y / 2 - center.y * 1.6, -center.z + 2);
     let cloneBasePosition = new THREE.Vector3(-center.x - 10, size.y / 2 - center.y * 1.6, -center.z);
-    let t = 0;
     chainBase.position.copy(basePosition);
     clone.position.copy(cloneBasePosition);
     
