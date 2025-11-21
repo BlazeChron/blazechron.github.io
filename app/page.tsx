@@ -14,12 +14,12 @@ export default function Home() {
             src={shimaenaga}
             alt="shimaenaga"
             width={180}
-            height={38}
             priority
             style={{
               alignSelf: 'center',
               borderRadius: 20,
-              transform: 'rotate(0deg)'
+              transform: 'rotate(0deg)',
+              height: 'auto'
             }}
           />
         <ul className="list-inside list-decimal max-w-md mx-auto text-sm text-center font-[family-name:var(--font-geist-mono)]">
