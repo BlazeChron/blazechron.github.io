@@ -3,7 +3,7 @@ import * as THREE from 'three';
 // Loader
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
-export function initOpening() {
+export function initOpening(onReady) {
   
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -89,6 +89,8 @@ export function initOpening() {
   
   let updateArray = [];
   
+  // links to load the rest of site only after threejs loads
+  let onReadyOnce = false;
   // update everything in array
   function animate() {
     for (const element of updateArray) {
@@ -116,12 +118,6 @@ export function initOpening() {
   //}
   
   let isOpening = false;
-  canvas.onclick = async () => { 
-    isOpening = true; 
-    // raw time wait lmao
-    await new Promise(r => setTimeout(r, 3000));
-    canvas.style.visibility = "hidden";
-  };
   
   function processDoors (gltf) {
     const doorBase = gltf.scene;
@@ -151,6 +147,16 @@ export function initOpening() {
     updateArray.push(animate);
   
     scene.add(doorBase);
+  if (!onReadyOnce) {
+    onReady();
+    onReadyOnce = true;
+    canvas.onclick = async () => { 
+      isOpening = true; 
+      // raw time wait lmao
+      await new Promise(r => setTimeout(r, 3000));
+      canvas.style.visibility = "hidden";
+    };
+  }
   }
   
   renderer.setAnimationLoop( animate );
