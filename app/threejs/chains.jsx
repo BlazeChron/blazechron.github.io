@@ -1,12 +1,12 @@
 'use client';
 import { useEffect } from 'react';
 
-export default function ChainScene() {
+export default function ChainScene({ onReady }) {
   useEffect(() => {
     import ('./main.js').then(({ initOpening }) => {
-      initOpening();
+      initOpening(onReady);
     });
-  }, []);
+  }, [onReady]);
 
   return (<canvas
             id="c"

@@ -1,14 +1,20 @@
+'use client';
 import Image from "next/image";
 import shimaenaga from "../assets/shimaenaga.png";
 import github from "../assets/github-mark.svg";
 import itch from "../assets/itchio-textless-black.svg";
 import Link from 'next/link';
 import ChainScene from './threejs/chains'
+import { useState } from 'react';
 
 export default function Home() {
+  const [waiting, setWaiting] = useState(true);
+
+  
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-    <ChainScene />
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]" style={{visibility: waiting ? "hidden" : "visible"}}>
+    <ChainScene onReady={() => {setWaiting(false);
+    console.log("wait done");}}/>
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
           <Image
             src={shimaenaga}
