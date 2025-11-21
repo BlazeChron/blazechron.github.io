@@ -15,9 +15,11 @@
     "@types/mdx": "^2.0.13",
     "next": "^14.2.33",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "three": "^0.181.2"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.17",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
