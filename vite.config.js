@@ -3,7 +3,7 @@ import { defineConfig } from 'vite'
 export default defineConfig(({command}) => ({
   // change base url
   base: command === 'build'
-    ? '/pages-test/'
+    ? '/'
     : '/',
   // include glb files
   assetsInclude: ["**/*.glb"],
