@@ -1,5 +1,4 @@
 export default `
-
 precision highp float;
 uniform float uTime;
 attribute int uIsHovered;
