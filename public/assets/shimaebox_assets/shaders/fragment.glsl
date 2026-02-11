@@ -1,5 +1,5 @@
 export default `
-precision mediump float;
+precision highp float;
 uniform float uTime;
 varying vec3 vPosition;
 varying vec3 vNormal;

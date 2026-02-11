@@ -1,5 +1,5 @@
 export default `
-precision mediump float;
+precision highp float;
 uniform float uTime;
 uniform bool uIsFocused;
 varying vec3 vPosition;

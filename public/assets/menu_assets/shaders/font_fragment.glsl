@@ -1,4 +1,5 @@
 export default `
+precision highp float;
 uniform float uTime;
 uniform float leftEndPosition;
 uniform float rightEndPosition;
